@@ -1,0 +1,13 @@
+{
+  "exclude": ["./node_modules/*", "./vite", "**/__tests__/*"],
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "NodeNext",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "declarationDir": "./",
+    "strict": true,
+    "moduleResolution": "NodeNext",
+    "allowSyntheticDefaultImports": true
+  },
+}

@@ -1,12 +1,14 @@
 {
   "name": "vueattr-pxtoremvw",
   "description": "Converting px to rem or vw in vue's Attribute",
-  "version": "0.0.1",
-  "main": "./vite/index.ts",
+  "version": "0.0.2",
   "type": "module",
   "exports": {
-    ".": "./vite/index.ts",
-    "./vite": "./vite/index.ts"
+    "./vite": {
+      "types": "./vite/index.d.ts",
+      "import": "./vite/index.esm.js",
+      "require": "./vite/index.js"
+    }
   },
   "files": [
     "vite",
@@ -16,13 +18,18 @@
     "package.json"
   ],
   "scripts": {
+    "build": "rollup -c rollup.config.vite.mjs",
     "test": "echo \"no test specified\""
   },
   "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@rollup/plugin-typescript": "^12.1.0",
     "@types/big.js": "^6.2.2",
     "@types/node": "^22.7.5",
     "@vue/compiler-sfc": "^3.5.12",
-    "big.js": "^6.2.2"
+    "big.js": "^6.2.2",
+    "rollup": "^4.24.0",
+    "tslib": "^2.7.0"
   },
   "repository": {
     "type": "git",
