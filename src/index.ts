@@ -9,7 +9,7 @@ interface Options {
   /** 设计稿的视口宽度 */
   viewportWidth?: number
   /** 根元素字体大小 */
-  rootValue?: number
+  rootFontSize?: number
   /** 单位转换后保留的精度 */
   unitPrecision?: number
   /** 设置最小的转换数值，只有大于它的值才会被转换 */
@@ -25,7 +25,7 @@ export default function (
     convertMode = 'vw',
     unitToConvert = 'px',
     viewportWidth = 375,
-    rootValue = 37.5,
+    rootFontSize = 37.5,
     unitPrecision = 5,
     minPixelValue = 1,
     exclude = [],
@@ -38,7 +38,7 @@ export default function (
       return `${Big(num).div(viewportWidth).times(100).toFixed(unitPrecision)}${convertMode}`
     },
     rem(num: string) {
-      return `${Big(num).div(rootValue).toFixed(unitPrecision)}${convertMode}`
+      return `${Big(num).div(rootFontSize).toFixed(unitPrecision)}${convertMode}`
     }
   }[convertMode]
   // 转换
