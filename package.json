@@ -1,0 +1,44 @@
+{
+  "name": "vueattr-pxtoremvw",
+  "description": "Converting px to rem or vw in vue's Attribute",
+  "version": "0.0.1",
+  "main": "./vite/index.ts",
+  "type": "module",
+  "exports": {
+    ".": "./vite/index.ts",
+    "./vite": "./vite/index.ts"
+  },
+  "files": [
+    "vite",
+    "LICENSE",
+    "README.md",
+    "README.zh-CN.md",
+    "package.json"
+  ],
+  "scripts": {
+    "test": "echo \"no test specified\""
+  },
+  "devDependencies": {
+    "@types/big.js": "^6.2.2",
+    "@types/node": "^22.7.5",
+    "@vue/compiler-sfc": "^3.5.12",
+    "big.js": "^6.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jian-qin/vueattr-pxtoremvw.git"
+  },
+  "keywords": [
+    "px",
+    "rem",
+    "vw",
+    "vue",
+    "attribute"
+  ],
+  "author": "jian-qin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jian-qin/vueattr-pxtoremvw/issues"
+  },
+  "homepage": "https://github.com/jian-qin/vueattr-pxtoremvw#readme"
+}
