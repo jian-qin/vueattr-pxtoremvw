@@ -45,12 +45,10 @@ export default function (
   function conversion(value: string) {
     const boundary = '^|$|:|;|,|\'|"|`|\\(|\\)|\\{|\\}|\\s|\\n|\\r|\\/'
     const conversion_reg = new RegExp(
-      `(${boundary})(\\-?\\d?\\.?\\d+)${unitToConvert}(${boundary})`,
+      `(?<=${boundary})(\\-?\\d?\\.?\\d+)${unitToConvert}(?=${boundary})`,
       'g'
     )
-    return value.replace(conversion_reg, (e, p1: string, p2: string, p3: string) =>
-      Math.abs(+p2) <= minPixelValue ? e : `${p1}${formatNumber(p2)}${p3}`
-    )
+    return value.replace(conversion_reg, (e, p1: string) => Math.abs(+p1) <= minPixelValue ? e : formatNumber(p1))
   }
   return {
     nama: 'attr-px-to-rem-viewport',
